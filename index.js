@@ -1,4 +1,4 @@
-console.log('Starting....')
+console.log('Iniciando....')
 var express = require('express')
 var cors = require('cors')
 var morgan = require('morgan');
@@ -19,7 +19,7 @@ app.use(express.static("public"))
 app.use('/', mainrouter)
 
 app.listen(PORT, () => {
-    console.log('Connected...')
+    console.log('Conectando...')
     console.log("Servidor rodando em http://localhost:" + PORT)
 })
 

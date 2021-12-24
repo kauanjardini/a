@@ -1,5 +1,5 @@
 {
-  "name": "api-akame",
+  "name": "kauan-ofc2",
   "version": "1.1.0",
   "description": "Nothing",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git.heroku.com/base-api-akame.git"
+    "url": "git+https://git.heroku.com/kauan-ofc2.git"
   },
   "keywords": [
     "simple",
@@ -20,15 +20,16 @@
   "author": "Breno",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/brenomakerr/akame-base-api"
+    "url": "https://github.com/kauanjardini/kauan-ofc2"
   },
   "dependencies": {
     "cors": "^2.8.5",
+    "discord-canvas": "^1.4.1",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
     "morgan": "^1.10.0",
     "ssl-express-www": "^3.0.7",
     "canvacord": "^5.1.0"
   },
-  "homepage": "https://github.com/brenomakerr/akame-base-api"
+  "homepage": "https://github.com/kauanjardini/kauan-ofc2"
 }

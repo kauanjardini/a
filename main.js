@@ -5,6 +5,8 @@ var router = express.Router();
 var { exec } = require('child_process')
 var fetch = require('node-fetch')
 var canvacord = require('canvacord').Canvas
+const Canvas = require('discord-canvas')
+Discord = require("discord.js")
 var fs = require('fs')
 
 async function getBuffer(url) {
@@ -38,6 +40,29 @@ function getRandom(nans) {
   if (!url) return res.status(408).send({ status: 408, menssagem: 'Coloque a url no parametrô'})
   res.type('gif')
   res.send(await canvacord.trigger(url))
+ break
+ case '/welcome':
+ case '/welcome/':
+ // if (!url) return res.status(408).send({ status: 408, menssagem: 'Coloque a url no parametrô'})
+      image = await new Canvas.Goodbye()
+  .setUsername("kauan")
+  .setDiscriminator("0001")
+  .setMemberCount("140")
+  .setGuildName("Server DEV")
+  .setAvatar("https://www.site.com/avatar.jpg")
+  .setColor("border", "#8015EA")
+  .setColor("username-box", "#8015EA")
+  .setColor("discriminator-box", "#8015EA")
+  .setColor("message-box", "#8015EA")
+  .setColor("title", "#8015EA")
+  .setColor("avatar", "#8015EA")
+  .setBackground("https://site.com/background.jpg")
+  .toAttachment();
+
+attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
+      
+  res.type('jpg')
+  res.send(await getBuffer(attachment))
  break
  case '/changemymind':
  case '/changemymind/':

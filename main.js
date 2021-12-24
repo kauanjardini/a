@@ -71,7 +71,7 @@ fundo = req.query.fundo
   .setBackground("https://site.com/background.jpg")
   .toAttachment();
       res.type('jpg')
-  res.send(await getBuffer(`data:image/png;base64,${image.toBuffer().toString('base64')}`))
+  res.send(await getBuffer(image.toBuffer()))
       break
       
  case '/changemymind':

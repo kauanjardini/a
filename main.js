@@ -5,7 +5,8 @@ var router = express.Router();
 var { exec } = require('child_process')
 var fetch = require('node-fetch')
 var canvacord = require('canvacord').Canvas
-const Canvas = require('discord-canvas')
+const Canvas = require("discord-canvas"),
+  Discord = require("discord.js");
 var fs = require('fs')
 
 async function getBuffer(url) {
@@ -70,8 +71,9 @@ fundo = req.query.fundo
   .setColor("avatar", "#8015EA")
   .setBackground("https://site.com/background.jpg")
   .toAttachment();
+      kaaaa = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
       res.type('jpg')
-  res.send(await getBuffer(image.toBuffer()))
+  res.send(await getBuffer(kaaaa))
       break
       
  case '/changemymind':

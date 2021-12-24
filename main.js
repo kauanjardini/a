@@ -131,7 +131,7 @@ router.post('/post/body', async (req, res) => {
    res.type('png')
    res.send(await getBuffer(random))
    } catch (e) {
-   res.send({ status: 400, response: 'Erro no servidor por favor reporte para o sayo!' })
+   res.send({ status: 400, response: 'ops, Erro no servidor por favor reporte para meu dono!' })
    }
    })
    router.all('*', async (req, res) => {

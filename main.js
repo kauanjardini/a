@@ -43,30 +43,13 @@ function getRandom(nans) {
  case '/welcome':
  case '/welcome/':
  // if (!url) return res.status(408).send({ status: 408, menssagem: 'Coloque a url no parametrô'})
-     welcomer = await new Canvas.Welcome()
-       .setUsername('kauan')
-       .setDiscriminator('mazbz')
-       .setMemberCount('55')
-       .setGuildName('jajjaj')
-       .setAvatar('https://images.wallpaperscraft.com/image/landscape_art_road_127350_1280x720.jpg')
-       .setText("title", `BEM VINDO`)
-       .setText("message", `VOCÊ ESTÁ NO `)
-       .setText("member-count", `VOCÊ É O MEMBRO N° 55`)
-       .setColor('border', '#00100C')
-       .setColor('username-box', '#00100C')
-       .setColor('discriminator-box', '#00100C')
-       .setColor('message-box', '#00100C')
-       .setColor('title', '#6577AF')
-       .setOpacity("username-box", 0.6)
-       .setOpacity("discriminator-box", 0.6)
-       .setOpacity("message-box", 0.6)
-       .setOpacity("border", 0.4)
-       .setBackground('https://images.wallpaperscraft.com/image/landscape_art_road_127350_1280x720.jpg').toAttachment()
+    
+
 
 
       
   res.type('jpg')
-  res.send(await getBuffer(`data:image/png;base64,${welcomer.toBuffer().toString('base64')}`))
+  res.send(await getBuffer(`https://akame-api.herokuapp.com/api/card/welcome?nome=kauan&nomegp=kauan-ofc&membros=666&perfil=https://telegra.ph/file/692385eb5225c1be33900.jpg&fotogp=https://telegra.ph/file/4156972a1039adb9a48c9.jpg&fundo=https://telegra.ph/file/14c9a6ce9c4e3e43a8ee1.jpg&apikey=Bd5d6oRj`))
  break
  case '/changemymind':
  case '/changemymind/':
@@ -90,7 +73,7 @@ function getRandom(nans) {
   } catch (e) {
   console.error(e) 
    res.type('text/json')
-   res.status(400).send({ status: 400, menssagem: 'Erro no servidor por favor reporte para o sayo!' })
+   res.status(400).send({ status: 400, menssagem: 'ops, erro no servidor por favor reporte para meu dono!' })
  }
  })
  router.get('/nsfw/hentai', async (req, res) => {
@@ -102,7 +85,7 @@ function getRandom(nans) {
  res.send(buffer)
  } catch {
  res.type('text/json')
- res.status(400).send({ status: 400, menssagem: 'Erro no servidor por favor reporte para o sayo!' })
+ res.status(400).send({ status: 400, menssagem: 'ops, Erro no servidor por favor reporte para meu dono!' })
  }
  })
  router.all('/shota', async (req, res) => {

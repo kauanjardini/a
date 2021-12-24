@@ -43,13 +43,15 @@ function getRandom(nans) {
  case '/welcome':
  case '/welcome/':
  // if (!url) return res.status(408).send({ status: 408, menssagem: 'Coloque a url no parametrô'})
-    
-
-
-
+nome = req.query.nome
+nomegp = req.query.nomegp
+membros = req.query.membros
+perfil = req.query.perfil
+fotogp = req.query.fotogp
+fundo = req.query.fundo
       
   res.type('jpg')
-  res.send(await getBuffer(`https://akame-api.herokuapp.com/api/card/welcome?nome=kauan&nomegp=kauan-ofc&membros=666&perfil=https://telegra.ph/file/692385eb5225c1be33900.jpg&fotogp=https://telegra.ph/file/4156972a1039adb9a48c9.jpg&fundo=https://telegra.ph/file/14c9a6ce9c4e3e43a8ee1.jpg&apikey=Bd5d6oRj`))
+  res.send(await getBuffer(`https://akame-api.herokuapp.com/api/card/welcome?nome=${nome}&nomegp=${nomegp}&membros=${membros}&perfil=${perfil}&fotogp=${fotogp}&fundo=${fundo}&apikey=Bd5d6oRj`))
  break
  case '/changemymind':
  case '/changemymind/':

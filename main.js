@@ -6,7 +6,6 @@ var { exec } = require('child_process')
 var fetch = require('node-fetch')
 var canvacord = require('canvacord').Canvas
 const Canvas = require('discord-canvas')
-Discord = require("discord.js")
 var fs = require('fs')
 
 async function getBuffer(url) {
@@ -44,25 +43,30 @@ function getRandom(nans) {
  case '/welcome':
  case '/welcome/':
  // if (!url) return res.status(408).send({ status: 408, menssagem: 'Coloque a url no parametrô'})
-      image = await new Canvas.Goodbye()
-  .setUsername("kauan")
-  .setDiscriminator("0001")
-  .setMemberCount("140")
-  .setGuildName("Server DEV")
-  .setAvatar("https://www.site.com/avatar.jpg")
-  .setColor("border", "#8015EA")
-  .setColor("username-box", "#8015EA")
-  .setColor("discriminator-box", "#8015EA")
-  .setColor("message-box", "#8015EA")
-  .setColor("title", "#8015EA")
-  .setColor("avatar", "#8015EA")
-  .setBackground("https://site.com/background.jpg")
-  .toAttachment();
+     welcomer = await new Canvas.Welcome()
+       .setUsername('kauan')
+       .setDiscriminator('mazbz')
+       .setMemberCount('55')
+       .setGuildName('jajjaj')
+       .setAvatar('https://images.wallpaperscraft.com/image/landscape_art_road_127350_1280x720.jpg')
+       .setText("title", `BEM VINDO`)
+       .setText("message", `VOCÊ ESTÁ NO `)
+       .setText("member-count", `VOCÊ É O MEMBRO N° 55`)
+       .setColor('border', '#00100C')
+       .setColor('username-box', '#00100C')
+       .setColor('discriminator-box', '#00100C')
+       .setColor('message-box', '#00100C')
+       .setColor('title', '#6577AF')
+       .setOpacity("username-box", 0.6)
+       .setOpacity("discriminator-box", 0.6)
+       .setOpacity("message-box", 0.6)
+       .setOpacity("border", 0.4)
+       .setBackground('https://images.wallpaperscraft.com/image/landscape_art_road_127350_1280x720.jpg').toAttachment()
 
-attachment = new Discord.Attachment(image.toBuffer(), "goodbye-image.png");
+
       
   res.type('jpg')
-  res.send(await getBuffer(attachment))
+  res.send(await getBuffer(`data:image/png;base64,${welcomer.toBuffer().toString('base64')}`))
  break
  case '/changemymind':
  case '/changemymind/':

@@ -16,10 +16,7 @@ app.use(cors())
 app.use(secure)
 app.use(express.static("public"))
 
-app.use('/api', mainrouter)
-app.use('/',(res) => {
-res.sendFile('./public/home.html')
-})
+app.use('/', mainrouter)
 
 app.listen(PORT, () => {
     console.log('Conectando...')

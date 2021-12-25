@@ -20,7 +20,7 @@ function getRandom(nans) {
   he = nans[Math.floor(Math.random() * nans.length)]
    return he
 }
- router.all('/api/loli', async (req, res) => {
+ router.all('/loli', async (req, res) => {
    try {
    json = JSON.parse(fs.readFileSync('lib/lolis.json').toString())
    random = json[Math.floor(Math.random() * json.length)]
@@ -30,7 +30,7 @@ function getRandom(nans) {
    res.send({ status: 400, response: 'Erro no servidor' })
    }
    })
-  router.get('/api/canvas/*', async (req, res) => {
+  router.get('/canvas/*', async (req, res) => {
    let { url, texto } = req.query
    try {
   switch(req.path.replace(/\/canvas/, '').toLowerCase()) {
@@ -79,7 +79,7 @@ fundo = req.query.fundo
    res.status(400).send({ status: 400, menssagem: 'ops, erro no servidor por favor reporte para meu dono!' })
  }
  })
- router.get('/api/nsfw/hentai', async (req, res) => {
+ router.get('/nsfw/hentai', async (req, res) => {
  try {
  end = getRandom([,"waifu", "neko"])
  let { url } = await getJson(`https://api.waifu.pics/nsfw/${end}`)
@@ -91,7 +91,7 @@ fundo = req.query.fundo
  res.status(400).send({ status: 400, menssagem: 'ops, Erro no servidor por favor reporte para meu dono!' })
  }
  })
- router.all('/api/shota', async (req, res) => {
+ router.all('/shota', async (req, res) => {
    try {
    json = JSON.parse(fs.readFileSync('lib/shotas.json').toString())
    random = json[Math.floor(Math.random() * json.length)]
@@ -101,7 +101,7 @@ fundo = req.query.fundo
    res.send({ status: 400, response: 'Server Error!' })
    }
    })
-router.post('/api/post/body', async (req, res) => {
+router.post('/post/body', async (req, res) => {
   res.send(req.body)
 })
    router.all('/api/nsfwloli', async (req, res) => {

@@ -56,7 +56,7 @@ fundo = req.query.fundo
       
     case '/bye':
       case '/bye/':
-     image = await new Canvas.Goodbye({
+     image = await new Canvas.Goodbye()
   .setUsername("kauan")
   .setDiscriminator("0001")
   .setMemberCount("140")
@@ -70,8 +70,7 @@ fundo = req.query.fundo
   .setColor("avatar", "#8015EA")
   .setBackground("https://site.com/background.jpg")
   .toAttachment();
-  })
-   await fs.writeFileSync(_kauan +'/menu.png', img)
+   await fs.writeFileSync(_kauan +'/menu.png', image)
   res.sendFile(_kauan+'/menu.png')
   
       break

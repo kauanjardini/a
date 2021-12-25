@@ -1,4 +1,4 @@
-__path = process.cwd()
+_kauan = process.cwd()
 
 var express = require('express');
 var router = express.Router();
@@ -54,10 +54,10 @@ fundo = req.query.fundo
   res.send(await getBuffer(`https://akame-api.herokuapp.com/api/card/welcome?nome=${nome}&nomegp=${nomegp}&membros=${membros}&perfil=${perfil}&fotogp=${fotogp}&fundo=${fundo}&apikey=Bd5d6oRj`))
  break
       
-    case '/welcome2':
-      
-     image = await new Canvas.Goodbye()
-  .setUsername("xixi52")
+    case '/bye':
+      case '/bye/':
+     image = await new Canvas.Goodbye({
+  .setUsername("kauan")
   .setDiscriminator("0001")
   .setMemberCount("140")
   .setGuildName("Server DEV")
@@ -70,8 +70,10 @@ fundo = req.query.fundo
   .setColor("avatar", "#8015EA")
   .setBackground("https://site.com/background.jpg")
   .toAttachment();
-      res.type('jpg')
-  res.send(await getBuffer(image))
+  })
+   await fs.writeFileSync(_kauan +'/menu.png', img)
+  res.sendFile(_kauan+'/menu.png')
+  
       break
       
  case '/changemymind':

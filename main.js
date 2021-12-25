@@ -115,11 +115,7 @@ router.post('/api/post/body', async (req, res) => {
    }
    })
    router.all('*', async (req, res) => {
-   res.status(404).json({
-            status:404,
-            error: 'A página que você está procurando não foi encontrada',
-            endpoint: req.path
-        })
+   res.status(404).sendFile(_kauan+ '/route/404.html')
 })
   
 

@@ -54,27 +54,6 @@ fundo = req.query.fundo
   res.send(await getBuffer(`https://akame-api.herokuapp.com/api/card/welcome?nome=${nome}&nomegp=${nomegp}&membros=${membros}&perfil=${perfil}&fotogp=${fotogp}&fundo=${fundo}&apikey=Bd5d6oRj`))
  break
       
-    case '/bye':
-      case '/bye/':
-     image = await new Canvas.Goodbye()
-  .setUsername("kauan")
-  .setDiscriminator("0001")
-  .setMemberCount("140")
-  .setGuildName("Server DEV")
-  .setAvatar("https://www.site.com/avatar.jpg")
-  .setColor("border", "#8015EA")
-  .setColor("username-box", "#8015EA")
-  .setColor("discriminator-box", "#8015EA")
-  .setColor("message-box", "#8015EA")
-  .setColor("title", "#8015EA")
-  .setColor("avatar", "#8015EA")
-  .setBackground("https://site.com/background.jpg")
-  .toAttachment();
-   await fs.writeFileSync(_kauan +'/menu.png', image)
-  res.sendFile(_kauan+'/menu.png')
-  
-      break
-      
  case '/changemymind':
  case '/changemymind/':
   if (!texto) return res.status(408).send({ status: 408, menssagem: 'Coloque o texto no parametrô' })

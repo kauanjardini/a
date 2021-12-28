@@ -47,14 +47,20 @@ function getRandom(nans) {
   res.send(await canvacord.trigger(url))
  break
     case '/rank':
-      rank = new canvacord2.Rank()
-    .setAvatar('https://telegra.ph/file/64711564fe456c969d13e.jpg')    
-    .setUsername('kauan')   
+      rank = new canvacord2.Rank()   
 rank.build()
     .then(buffer => {
         canvacord2.write(buffer, "rankCard.png");
-       
-        res.sendFile('rankCard.png')
+console.log('sucesso')
+    });
+      
+      break 
+      case '/welcome2':
+      rank = new canvacord2.welcomer()   
+rank.build()
+    .then(buffer => {
+        canvacord2.write(buffer, "rankCard.png");
+console.log('sucesso')
     });
       
       break 

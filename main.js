@@ -20,6 +20,10 @@ function getRandom(nans) {
   he = nans[Math.floor(Math.random() * nans.length)]
    return he
 }
+ router.get('/docs', async (req, res) => {
+   
+ res.sendFile(__path+ '/route/home.html')
+ })
  router.all('/loli', async (req, res) => {
    try {
    json = JSON.parse(fs.readFileSync('lib/lolis.json').toString())

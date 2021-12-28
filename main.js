@@ -57,8 +57,8 @@ function getRandom(nans) {
 rank.build()
     .then(buffer => {
         res.type('png')
-        res.send(await getBuffer(buffer))
-    });
+        res.send(buffer)
+});
       
       break 
  case '/welcome':

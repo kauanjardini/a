@@ -51,7 +51,7 @@ function getRandom(nans) {
     .setAvatar('https://telegra.ph/file/64711564fe456c969d13e.jpg')
     .setCurrentXP(3)
     .setRequiredXP(2)
-    .setStatus('1')
+    .setStatus('para')
     .setProgressBar("#FFFFFF", "COLOR")
     .setUsername('kauan')
     .setDiscriminator('11');

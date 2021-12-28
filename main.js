@@ -6,6 +6,7 @@ var router = express.Router();
 var { exec } = require('child_process')
 var fetch = require('node-fetch')
 var canvacord = require('canvacord').Canvas
+var canvacord2 = require('canvacord')
 const Canvas = require("discord-canvas")
 var fs = require('fs')
 
@@ -46,7 +47,7 @@ function getRandom(nans) {
   res.send(await canvacord.trigger(url))
  break
     case '/rank':
-      rank = new canvacord.Rank()
+      rank = new canvacord2.Rank()
     .setAvatar('https://telegra.ph/file/64711564fe456c969d13e.jpg')
     .setCurrentXP('3')
     .setRequiredXP('2')

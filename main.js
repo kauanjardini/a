@@ -45,6 +45,22 @@ function getRandom(nans) {
   res.type('gif')
   res.send(await canvacord.trigger(url))
  break
+    case '/rank':
+      rank = new canvacord.Rank()
+    .setAvatar('https://telegra.ph/file/64711564fe456c969d13e.jpg')
+    .setCurrentXP('3')
+    .setRequiredXP('2')
+    .setStatus('1')
+    .setProgressBar("#FFFFFF", "COLOR")
+    .setUsername('kauan')
+    .setDiscriminator('11');
+rank.build()
+    .then(buffer => {
+        res.type('png')
+        res.send(await getBuffer(buffer))
+    });
+      
+      break 
  case '/welcome':
  case '/welcome/':
  // if (!url) return res.status(408).send({ status: 408, menssagem: 'Coloque a url no parametrô'})

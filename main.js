@@ -48,17 +48,14 @@ function getRandom(nans) {
  break
     case '/rank':
       rank = new canvacord2.Rank()
-    .setAvatar('https://telegra.ph/file/64711564fe456c969d13e.jpg')
-    .setCurrentXP(3)
-    .setRequiredXP(2)
-    .setProgressBar("#FFFFFF", "COLOR")
-    .setUsername('kauan')
-    .setDiscriminator('11');
+    .setAvatar('https://telegra.ph/file/64711564fe456c969d13e.jpg')    
+    .setUsername('kauan')   
 rank.build()
     .then(buffer => {
-        res.type('png')
-        res.send(buffer)
-});
+        canvacord2.write(buffer, "rankCard.png");
+       
+        res.sendFile('rankCard.png')
+    });
       
       break 
  case '/welcome':

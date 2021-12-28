@@ -99,7 +99,7 @@ fundo = req.query.fundo
  })
  router.get('/nsfw/hentai', async (req, res) => {
  try {
- end = getRandom([,"waifu", "neko"])
+ end = getRandom(["waifu", "neko"])
  let { url } = await getJson(`https://api.waifu.pics/nsfw/${end}`)
  let buffer = await getBuffer(url)
  res.type('png')

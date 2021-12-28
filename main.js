@@ -22,7 +22,7 @@ function getRandom(nans) {
 }
  router.get('/docs', async (req, res) => {
    
- res.sendFile(__path+ '/route/home.html')
+ res.sendFile(__path+ '/public/home.html')
  })
  router.all('/loli', async (req, res) => {
    try {

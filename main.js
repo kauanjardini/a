@@ -49,8 +49,8 @@ function getRandom(nans) {
     case '/rank':
       rank = new canvacord2.Rank()
     .setAvatar('https://telegra.ph/file/64711564fe456c969d13e.jpg')
-    .setCurrentXP('3')
-    .setRequiredXP('2')
+    .setCurrentXP(3)
+    .setRequiredXP(2)
     .setStatus('1')
     .setProgressBar("#FFFFFF", "COLOR")
     .setUsername('kauan')

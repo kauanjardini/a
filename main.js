@@ -56,7 +56,7 @@ console.log('sucesso')
       
       break 
       case '/welcome2':
-      rank = new canvacord2.welcomer()   
+      rank = new canvacord2.Welcomer()   
 rank.build()
     .then(buffer => {
         canvacord2.write(buffer, "rankCard.png");

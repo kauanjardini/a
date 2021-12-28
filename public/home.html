@@ -1,39 +1,308 @@
 <!DOCTYPE html>
-<html><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <title>Kauan Rest API</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="icon" href="https://telegra.ph/file/692385eb5225c1be33900.jpg" type="image/jpg">
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<title>KAUAN API´s</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+	<meta content="Kauan Oficial" name="description" />
+	<meta content="Kauan" name="author" />
+
+	<!-- ================== BEGIN BASE CSS STYLE ================== -->
+	<link href="https://viniciusbot-tools.herokuapp.com/assets/css/transparent/app.min.css" rel="stylesheet" />
+	<!-- ================== END BASE CSS STYLE ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL CSS STYLE ================== -->
+	<link href="https://viniciusbot-tools.herokuapp.com/assets/plugins/jvectormap-next/jquery-jvectormap.css" rel="stylesheet" />
+	<link href="https://viniciusbot-tools.herokuapp.com/assets/plugins/bootstrap-calendar/css/bootstrap_calendar.css" rel="stylesheet" />
+	<link href="https://viniciusbot-tools.herokuapp.com/assets/plugins/gritter/css/jquery.gritter.css" rel="stylesheet" />
+	<link href="https://viniciusbot-tools.herokuapp.com/assets/plugins/nvd3/build/nv.d3.css" rel="stylesheet" />
+	<!-- ================== END PAGE LEVEL CSS STYLE ================== -->
 </head>
 
-<body data-new-gr-c-s-check-loaded="14.1014.0" data-gr-ext-installed="">
-    <img id="userPhoto" src="https://telegra.ph/file/692385eb5225c1be33900.jpg" alt="Kauanzin: criador">
-    
-    <a href="https://api.whatsapp.com/send?phone=5544991150998&text=Base%20de%20rest%20api" id="userName"></a>
-    <div id="links">
-        <a class="link" href="canvas/clyde?texto=Kauan api">Canvas Clyde</a>
-    </div>
-    <div id="links">
-        <a class="link" href="canvas/changemymind?texto=kauan api">Canvas ChangeMyMind</a>
-    </div>
-    <div id="links">
-        <a class="link" href="canvas/trigger?url=https://telegra.ph/file/692385eb5225c1be33900.jpg">Canvas Trigger</a>
-    </div>
-    <div id="links">
-        <a class="link" href="loli">Loli</a>
-    </div>
-    <div id="links">
-        <a class="link" href="shota">Shota</a>
-    </div>
-    <div id="links">
-        <a class="link" href="nsfwloli">NSFW loli</a>
-    </div>
-    <div id="links">
-        <a class="link" href="nsfw/hentai">Hentai</a>
-    </div>
-    <!-- Javascript -->
-    <script src="/script/jquery.min.js"></script>
-    <script src="/script/index.js"></script>
+<body>
+	<!-- begin page-cover -->
+	<div class="page-cover"></div>
+	<!-- end page-cover -->
 
-</body></html>
+	<!-- begin #page-loader -->
+	<div id="page-loader" class="fade show">
+		<span class="spinner"></span>
+	</div>
+	<!-- end #page-loader -->
+
+	<!-- begin #page-container -->
+	<div id="page-container" class="fade page-sidebar-fixed page-header-fixed">
+		<!-- begin #header -->
+		<div id="header" class="header navbar-default">
+			<!-- begin navbar-header -->
+			<div class="navbar-header">
+				<a href="https://kauan-ofc2.herokuapp.com/" class="navbar-brand"><span class="navbar-logo"></span> <b>Kauan</b> for Developers</a>
+				<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<!-- end navbar-header -->
+			<!-- begin header-nav -->
+			<ul class="navbar-nav navbar-right">
+				<!--<li class="navbar-form">
+					<form action="" method="POST" name="search_form">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Enter keyword" />
+							<button type="submit" class="btn btn-search"><i class="fa fa-search"></i></button>
+						</div>
+					</form>
+				</li>-->
+				<li class="dropdown navbar-user">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+						<span class="d-none d-md-inline">Kauan</span> <b class="caret"></b>
+					</a>
+					
+				</li>
+			</ul>
+			<!-- end header navigation right -->
+		</div>
+		<!-- end #header -->
+
+		<!-- begin #sidebar -->
+		<div id="sidebar" class="sidebar">
+			<!-- begin sidebar scrollbar -->
+			<div data-scrollbar="true" data-height="100%">
+				<!-- begin sidebar user -->
+				<ul class="nav">
+					<li class="nav-profile">
+						<a href="javascript:;" data-toggle="nav-profile">
+							<div class="cover with-shadow"></div>
+							<!--<div class="image">
+								<img src="https://viniciusbot-tools.herokuapp.com/assets/img/user/user-13.jpg" alt="" />
+							</div>--->
+							<div class="info">
+								<b class="caret pull-right"></b>Vinicius
+								<small>Back-end Developer</small>
+							</div>
+						</a>
+					</li>
+					<li>
+						<ul class="nav nav-profile">
+							<li><a href="https://wa.me/554491150998"><i class="fa fa-pencil-alt"></i> Contato</a></li>
+						</ul>
+					</li>
+					
+					</li>
+				</ul>
+				
+
+				<!-- end sidebar user -->
+				<!-- begin sidebar nav -->
+				<ul class="nav">
+					<li class="nav-header">Navegação</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+							<b class="caret"></b>
+							<i class="fa fa-gem"></i>
+							<span>Downloader<span class="label label-theme">NOVO</span></span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="/ytmp3?url=https://www.youtube.com/watch?v=FAucVNRx_mU">YTMP3 off</a></li>
+							<li><a href="/ytmp4?url=https://www.youtube.com/watch?v=FAucVNRx_mU">YTMP4 off</a></li>
+							<li><a href="/ssweb2?url=https://google.com">Print Web</a></li>
+							<li><a href="/play?musica=Fica+Avontade">Youtube Play</a></li>
+                                                        <li><a href="/canvas/clyde?texto=Kauan api">CANVAS CLYDE</a></li>
+							<li><a href="/canvas/changemymind?texto=kauan api">Canvas Changemymind</a></li>
+							<li><a href="/canvas/trigger?url=https://telegra.ph/file/692385eb5225c1be33900.jpg">Canvas trigger</a></li>
+							<li><a href="/loli">Loli</a></li>
+							<li><a href="/shota">Shota</a></li>
+                                                        <li><a href="/nsfwloli">Nsfw Loli</a></li>
+							<li><a href="/nsfw/hentai">Nsfw hentai</a></li>
+							<li><a href="/canvas/welcome?nome=EDICTH-BOT&nomegp=Kauan apis&membros=0&perfil=https://telegra.ph/file/692385eb5225c1be33900.jpg&fotogp=https://telegra.ph/file/4156972a1039adb9a48c9.jpg&fundo=https://telegra.ph/file/14c9a6ce9c4e3e43a8ee1.jpg">welcome</a></li>
+							<li><a href="/canvas/goodbye?nome=EDICTH-BOT&nomegp=Kauan apis&membros=0&perfil=https://telegra.ph/file/692385eb5225c1be33900.jpg&fotogp=https://telegra.ph/file/4156972a1039adb9a48c9.jpg&fundo=https://telegra.ph/file/14c9a6ce9c4e3e43a8ee1.jpg">GOODBYE</a></li>
+						
+					</li>
+					
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+							<b class="caret"></b>
+							<i class="fa fa-gem"></i>
+							<span>Search<span class="label label-theme">NOVO</span></span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="/api/happymod?q=Free+Fire">Happymod Search</a></li>
+							<li><a href="/api/wallpaper">Wallpaper</a></li>
+						</ul>
+					</li>
+					<li class="has-sub">
+						<a href="javascript:;">
+							<b class="caret"></b>
+							<i class="fa fa-gem"></i>
+							<span>Canvacord<span class="label label-theme">NOVO</span></span>
+						</a>
+						<ul class="sub-menu">
+							<li><a href="/api/canvas/leave?titulo=Pedro&nome=GDR&perfil=https://images2.alphacoders.com/708/70800.jpg&fundo=https://images2.alphacoders.com/708/70800.jpg&grupo=Fds&membroConta=40&numero=2121">LEAVE</a></li>
+							<li><a href="/api/canvas/welcome?titulo=Pedro&nome=GDR&perfil=https://images2.alphacoders.com/708/70800.jpg&fundo=https://images2.alphacoders.com/708/70800.jpg&grupo=Fds&membroConta=40&numero=2121">WELCOME</a></li>
+						</ul>
+						<ul class="sub-menu">
+							
+						</ul>
+					</li>
+					
+
+					<!-- begin sidebar minify button -->
+					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i
+								class="fa fa-angle-double-left"></i></a></li>
+					<!-- end sidebar minify button -->
+				</ul>
+				<!-- end sidebar nav -->
+			</div>
+			<!-- end sidebar scrollbar -->
+		</div>
+		<div class="sidebar-bg"></div>
+		<!-- end #sidebar -->
+
+		<!-- begin #content -->
+		<div id="content" class="content">
+			<!-- begin breadcrumb -->
+			<ol class="breadcrumb float-xl-right">
+				<li class="breadcrumb-item"><a href="javascript:;">Inicio</a></li>
+				<li class="breadcrumb-item"><a href="javascript:;">Tools</a></li>
+			</ol>
+			<!-- end breadcrumb -->
+			<!-- begin page-header -->
+			<h1 class="page-header">cKauan <small>OFC</small></h1>
+			
+					</div>
+				</div>
+				<div class="col-xl-3 col-md-6">
+					<div class="widget widget-stats bg-gradient-green">
+						<div class="stats-icon stats-icon-lg"><i class="fa fa-comment-alt fa-fw"></i></div>
+						<div class="stats-content">
+							<div class="stats-title">TEMPO</div>
+							<div class="stats-number" id="jam">Aguarde...</div>
+							<div class="stats-progress progress">
+								<div class="progress-bar" style="width: 40.1%;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end col-3 -->
+				<!-- begin col-3 -->
+				<div class="col-xl-3 col-md-6">
+					<div class="widget widget-stats bg-gradient-orange-red">
+						<div class="stats-icon stats-icon-lg"><i class="fa fa-archive fa-fw"></i></div>
+						<div class="stats-content">
+							<div class="stats-title">SUA BATERIA</div>
+							<span id="batteryLevel"></span>
+							<div class="stats-number" id="percentageLevel">Aguarde...</div>
+							<div class="stats-progress progress">
+								<div class="progress-bar" style="width: 70.1%;"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- end col-3 -->
+			</div>
+			<!-- end row -->
+			<!-- begin row -->
+			<div class="row">
+				<!-- begin col-8 -->
+				<!-- end col-8 -->
+				<!-- begin col-4 -->
+				<!-- end col-4 -->
+			</div>
+			<!-- end row -->
+			<!-- begin row -->
+
+			<!-- end col-4 -->
+			<!-- begin col-4 -->
+			<!-- end col-4 -->
+			<!-- begin col-4 -->
+
+			<!-- end panel -->
+		</div>
+		<!-- end col-4 -->
+	</div>
+	<!-- end row -->
+	</div>
+	<!-- end #content -->
+
+	
+	<!-- begin scroll to top btn -->
+	<a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top fade" data-click="scroll-top"><i
+			class="fa fa-angle-up"></i></a>
+	<!-- end scroll to top btn -->
+	</div>
+	<!-- end page container -->
+	<script>
+		var batteryLevel = document.getElementById("batteryLevel");
+			var styleBatteryLevel = batteryLevel.style;
+			const percentageLevela = document.getElementById("percentageLevel");
+			navigator.getBattery().then(function(battery) {
+			function updateAllBatteryInfo(){
+			updateLevelInfo();
+			}
+			updateAllBatteryInfo();
+			battery.addEventListener('levelchange',      function(){
+			setInterval(function(){
+			updateLevelInfo()
+			},1000);
+			});
+			function updateLevelInfo(){
+			var numBattery = battery.level * 100;
+			console.log("BATERIA: " + numBattery)
+			percentageLevela.innerHTML = Math.round(numBattery) + "%"
+			//percentageLevela.textContent=Math.round(numBattery) + "%";
+			//styleBatteryLevel.height=numBattery + "%";
+			};
+		});
+	</script>
+	<script>
+
+		const countEl = document.getElementById('count');
+		updateVisitCount();
+		function updateVisitCount() {
+			fetch('https://api.countapi.xyz/update/gdr-api/visits?amount=1')
+				.then(res => res.json())
+				.then(res => {
+					countEl.innerHTML = 0;
+				})
+		}
+
+	</script>
+		  <script>
+			function toast(){
+			
+			}
+			window.setTimeout("tempo()", 1000);
+				function tempo() {
+					var tempo = new Date();
+					setTimeout("tempo()", 1000);
+					let strings = `${tempo.getHours()}H  ${tempo.getMinutes()}Min   ${tempo.getSeconds()}Seg`
+					document.getElementById("jam").textContent = strings
+				}
+			const textnya = document.querySelector('.status'); 
+			var apikey = document.getElementById("ampikey")
+			</script>
+	<!-- ================== BEGIN BASE JS ================== -->
+	<script src="https://viniciusbot-tools.herokuapp.com/assets/js/app.min.js"></script>
+	<script src="https://viniciusbot-tools.herokuapp.com/assets/js/theme/transparent.min.js"></script>
+	<!-- ================== END BASE JS ================== -->
+
+	<!-- ================== BEGIN PAGE LEVEL JS ================== -->
+	<script src="https://viniciusbot-tools.herokuapp.com/assets/plugins/d3/d3.min.js"></script>
+	<script src="https://viniciusbot-tools.herokuapp.com/assets/plugins/nvd3/build/nv.d3.min.js"></script>
+	<script src="https://viniciusbot-tools.herokuapp.com/assets/plugins/jvectormap-next/jquery-jvectormap.min.js"></script>
+	<script src="https://viniciusbot-tools.herokuapp.com/assets/plugins/jvectormap-next/jquery-jvectormap-world-mill.js"></script>
+	<script src="https://viniciusbot-tools.herokuapp.com/assets/plugins/bootstrap-calendar/js/bootstrap_calendar.min.js"></script>
+	<script src="https://viniciusbot-tools.herokuapp.com/assets/plugins/gritter/js/jquery.gritter.js"></script>
+	<script>
+		COLOR_GREEN = '#00cbff';
+	</script>
+
+	<script src="https://viniciusbot-tools.herokuapp.com/assets/js/demo/dashboard-v2.js"></script>
+	<!-- ================== END PAGE LEVEL JS ================== -->
+</body>
+
+</html>

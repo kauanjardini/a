@@ -1,4 +1,5 @@
 _kauan = process.cwd()
+__path = process.cwd()
 
 var express = require('express');
 var router = express.Router();

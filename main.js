@@ -64,28 +64,7 @@ console.log('sucesso')
     });
       
       break 
-      case '/welcome3':
-     image = await new canvas.RankCard()
-.setAddon("xp", false)
-.setAddon("rank", false)
-.setAvatar('https://telegra.ph/file/692385eb5225c1be33900.jpg')
-.setLevel(7)
-.setReputation(450)
-.setRankName("professional")
-.setUsername("xixi52")
-.setBadge(1, "gold")
-.setBadge(3, "diamond")
-.setBadge(5, "silver")
-.setBadge(6, "bronze")
-.setBackground('https://telegra.ph/file/692385eb5225c1be33900.jpg')
-.toAttachment()
-     image.build()
-    .then(buffer => {
-
-  res.type('jpg')
-  res.send( await getBuffer(buffer))
-    });
-      break
+     
  case '/welcome':
  case '/welcome/':
  // if (!url) return res.status(408).send({ status: 408, menssagem: 'Coloque a url no parametrô'})

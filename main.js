@@ -65,30 +65,25 @@ console.log('sucesso')
       
       break 
       case '/welcome3':
-      welcomer = await new Canvas.Welcome()
-.setUsername('kauan')
-.setDiscriminator(2222)
-.setMemberCount(10)
-.setGuildName('kauan api')
-.setAvatar('https://images.wallpaperscraft.com/image/landscape_art_road_127350_1280x720.jpg')
-.setText("title", `BEM VINDO`)
-.setText("message", `VOCÊ ESTÁ NO `)
-.setText("member-count", `VOCÊ É O MEMBRO N° 100`)
-.setColor('border', '#00100C')
-.setColor('username-box', '#00100C')
-.setColor('discriminator-box', '#00100C')
-.setColor('message-box', '#00100C')
-.setColor('title', '#6577AF')
-.setOpacity("username-box", 0.6)
-.setOpacity("discriminator-box", 0.6)
-.setOpacity("message-box", 0.6)
-.setOpacity("border", 0.4)
-.setBackground('https://images.wallpaperscraft.com/image/landscape_art_road_127350_1280x720.jpg')
+     image = await new canvas.RankCard()
+.setAddon("xp", false)
+.setAddon("rank", false)
+.setAvatar('https://telegra.ph/file/692385eb5225c1be33900.jpg')
+.setLevel(7)
+.setReputation(450)
+.setRankName("professional")
+.setUsername("xixi52")
+.setBadge(1, "gold")
+.setBadge(3, "diamond")
+.setBadge(5, "silver")
+.setBadge(6, "bronze")
+.setBackground('https://telegra.ph/file/692385eb5225c1be33900.jpg')
 .toAttachment()
-     welcomer.build()
+     image.build()
     .then(buffer => {
-        canvacord2.write(buffer, "welcome.png");
-console.log('sucesso')
+
+  res.type('jpg')
+  res.send( await getBuffer(buffer))
     });
       break
  case '/welcome':
